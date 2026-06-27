@@ -1,6 +1,6 @@
 import { describe, it,  expect } from "vitest";
 import { setupRootAppContent } from "../setupRootAppContent";
-import { Tabuleiro } from "../src/componentes/tabuleiro"; 
+import { Tabuleiro } from "../src/componentes/tabuleiro.js"; 
 
 describe('Tabuleiro', async () => {
     it('cria um tabuleiro', async () => {
