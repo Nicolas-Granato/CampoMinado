@@ -1,3 +1,5 @@
+import { Celula } from "./Celula.js";
+
 export class Tabuleiro extends HTMLElement {
     #eixo = 9;
     #numeroBombas = 10;
@@ -14,10 +16,12 @@ export class Tabuleiro extends HTMLElement {
             :host{
                 display: grid;
                 background-color: gray;
-                grid-columns: repeat(9,22px);
-                grid-rows: repeat(9,22px);
+                grid-template-columns: repeat(9,40px);
+                grid-template-rows: repeat(9,40px);
                 padding: 10px;
                 border: 2px solid black;
+                width: max-content;
+                height: max-content;
             }
         </style>
         `
@@ -38,6 +42,13 @@ export class Tabuleiro extends HTMLElement {
         this.#render();
     }
 
+    get eixo(){
+        return this.#eixo;
+    }
+
+    get quantidadeBombas(){
+        return this.#numeroBombas;
+    }
 }
 
 customElements.define('tabuleiro-campominado',Tabuleiro);

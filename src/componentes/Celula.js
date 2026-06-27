@@ -15,10 +15,10 @@ export class Celula extends HTMLElement{
         <style>
             :host {
                 display: flex;
-                border: solid 2px black;
-                background-color: light-gray;
-                width: 22px;
-                height: 22px;
+                border: solid 1px black;
+                background-color: lightgray;
+                width: 40px;
+                height: 40px;
                 box-sizing: border-box;
                 cursor: pointer;
                 color: gray;
